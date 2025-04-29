@@ -8,22 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 반복문
+namespace WebBrowser
 {
     public partial class Form1: Form
     {
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label1.Text = "";
-            for (int i = 1; i < 10; i++)
-            {
-                label1.Text += txtDan.Text + " * " + i.ToString() + " = " + (int.Parse(txtDan.Text) * i).ToString() + Environment.NewLine;
-            }
         }
     }
 }

@@ -19,8 +19,8 @@ namespace Type
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int val = 100.ToString();
-            Label.Text = val;
+            //int val = 100.ToString();
+            //Label.Text = val;
         }
     }
 }

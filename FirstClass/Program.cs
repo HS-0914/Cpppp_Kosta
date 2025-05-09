@@ -10,6 +10,11 @@ namespace FirstClass
     {
         protected int eyes, nose, mouth, ears;
         protected string kinds;
+        virtual public void Bark()
+        {
+            Console.WriteLine("멍멍");
+
+        }
     }
     public class Poodle : Dog { 
         public Poodle()

@@ -6,6 +6,51 @@ using System.Threading.Tasks;
 
 namespace 추상클래스
 {
+    public abstract class SmartPhone
+    {
+        public abstract void Camera();
+
+        public abstract void CallPhone();
+
+        public abstract void Network();
+    }
+
+    public class Samsung : SmartPhone
+    {
+        public override void Camera()
+        {
+            Console.WriteLine("삼성 카메라 기능 구현");
+        }
+
+        public override void CallPhone()
+        {
+            Console.WriteLine("삼성 전화 기능 구현");
+        }
+
+        public override void Network()
+        {
+            Console.WriteLine("삼성 통신 기능 구현");
+        }
+    }
+
+    public class Apple : SmartPhone
+    {
+        public override void Camera()
+        {
+            Console.WriteLine("애플 카메라 기능 구현");
+        }
+
+        public override void CallPhone()
+        {
+            Console.WriteLine("애플 전화 기능 구현");
+        }
+
+        public override void Network()
+        {
+            Console.WriteLine("애플 통신 기능 구현");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -19,7 +64,6 @@ namespace 추상클래스
             phone.Camera();
             phone.CallPhone();
             phone.Network();
-
         }
     }
     class Base

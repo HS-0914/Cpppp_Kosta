@@ -17,6 +17,7 @@ namespace 스레드락
         private delegate void CrossCall();
         private int money;
         private object lockObject = new object();
+        private static Mutex mutex = new Mutex(false, "mtxObj");
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +45,8 @@ namespace 스레드락
         {
             int task = 0;
             //lock (lockObject)
-            Monitor.Enter(lockObject);
+            //Monitor.Enter(lockObject);
+            mutex.WaitOne();
             {
                 while (task < 5)
                 {
@@ -55,12 +57,27 @@ namespace 스레드락
                     task++;
                 }
             }
-           
+            //Monitor.Exit(lockObject);
+            mutex.ReleaseMutex();
+
         }
 
         private void ThreadState()
         {
-            textBox1.Text = thdCode;
+            textBox1.Text += thdCode;
         }
     }
 }
+
+
+/* C++ 기반 스레드 동기화
+이벤트
+크리티컬섹션
+세마포어
+뮤텍스
+
+C# ㅣㄱ반
+lock
+모니터
+뮤텍스
+*/

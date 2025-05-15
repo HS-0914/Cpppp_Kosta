@@ -34,12 +34,12 @@ namespace 문자열메소드
             //    label1.Text = "외국인";
             //}
             label1.Text = "";
-            string[] strArr = str.Split(",");
+            //string[] strArr = str.Split(",");
 
-            foreach(string arr in strArr)
-            {
-                label1.Text += "\n" + arr;
-            }
+            //foreach(string arr in strArr)
+            //{
+            //    label1.Text += "\n" + arr;
+            //}
             
         }
     }
